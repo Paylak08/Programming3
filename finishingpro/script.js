@@ -157,3 +157,4 @@ function draw() {
         policeArr.push(p)
     }
 }
+console.log("Hello World");
