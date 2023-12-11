@@ -21,11 +21,25 @@
 //     fs.appendFileSync(file, "Hello world\n");
 // }
 // main();
-let fs = require('fs');
-function main() {
-    fs.writeFile("hello.txt", "Hello world\n", function (err) {
-        console.log("fs.writeFile ended");
-    });
-    console.log("fs.writeFile");
+// let fs = require('fs');
+// function main() {
+//     fs.writeFile("hello.txt", "Hello world\n", function (err) {
+//         console.log("fs.writeFile ended");
+//     });
+//     console.log("fs.writeFile");
+// }
+// main();
+let obj = {
+    "first_name": "Vardan",
+    "last_name": "Hovsepyan",
+    "age": 13,
+    "tumo_student": true 
 }
-main();
+let name = obj.name
+let last_name = obj.last_name
+let age = obj.age
+let tumo = obj.tumo_student
+JSON.stringify(name)
+JSON.stringify(last_name)
+JSON.stringify(age)
+JSON.stringify(tumo_student)
