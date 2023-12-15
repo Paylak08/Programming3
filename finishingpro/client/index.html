@@ -8,7 +8,6 @@
     <title>Document</title>
     <script src="socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
-    <script src="script.js" defer></script>
     <style>
         canvas {
             display: block;
@@ -92,31 +91,17 @@
 </head>
 
 <body background-color="blue">
-    <button class="rest" onclick="one()">Bank</button>
+    <button class="rest" onclick="addGold()">Bank</button>
     <div id="output"></div>
     <button class="restred"
-        onclick="two(Math.floor(Math.random() * 50),Math.floor(Math.random() * 50))">Super_Robber_Create</button>
+        onclick="SupRob(Math.floor(Math.random() * 50),Math.floor(Math.random() * 50))">Super_Robber_Create</button>
     <div id="output"></div>
     <a href="rules.html">
         <button class="restred">rules</button>
     </a>
 
+    <script src="script.js" defer></script>
 
-    <script>
-    // document.getElementById("myButton").addEventListener("click", function one() {
-    //     document.getElementById("output").textContent = matrix;
-    //     document.getElementById("output").textContent = x;
-    //     document.getElementById("output").textContent = y;
-    //     document.getElementById("output").textContent = matrixSize;
-    // });
-    // function one(){
-    //     if(matrix[y][x] == 1){
-    //         matrix[y][x] = 0
-    //     }else{
-    //         matrix[y][x] = 1
-    //     }
-    // }
-    </script>
 </body>
 
 </html>
