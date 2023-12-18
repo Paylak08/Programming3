@@ -17,6 +17,7 @@ module.exports = class LivigCreature{
     
 
         chooseCell(char1, char2){
+            
             let found = []
             for(let i in this.directions){
                 let x = this.directions[i][0]

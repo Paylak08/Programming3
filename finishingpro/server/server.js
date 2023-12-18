@@ -98,6 +98,14 @@ function two(obj) {
     }
 }
 
+// function winte() {
+//     for (let x in goldArr){
+//         if (matrix[y][x] == 1){
+//             matrix[y][x] = 11
+//         }
+//     }
+// }
+
 function object(matrix){
     for (let y = 0; y < matrix.length; y++) {
         for (let x = 0; x < matrix[y].length; x++) {
@@ -174,4 +182,18 @@ io.on('connection', function(socket){
     object(matrix);
     socket.on("add gold", one)
     socket.on("SuperRobber", two)
+    // socket.on("winter", winte)
 })
+
+// let statistickOfCreature = {
+//     gold:0
+// }
+
+// setInterval(function(){
+
+//     statistickOfCreature.gold = goldArr;
+
+//     fs.writeFile("statistics.js", JSON.stringify(statistickOfCreature))
+
+
+// },1000)
