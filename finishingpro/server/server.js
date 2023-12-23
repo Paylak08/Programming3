@@ -98,13 +98,65 @@ function two(obj) {
     }
 }
 
-// function winte() {
-//     for (let x in goldArr){
-//         if (matrix[y][x] == 1){
-//             matrix[y][x] = 11
-//         }
-//     }
-// }
+function Wi(){
+    for(let i in goldArr){
+        goldArr[i].multiply = -4
+    }
+    for(let i in robberArr){
+        robberArr[i].energy = -20
+    }
+    for(let i in policeArr){
+        policeArr[i].energy = -20
+    }
+    for(let i in supRobArr){
+        supRobArr[i].energy = -20
+    }
+}
+
+function Au(){
+    for(let i in goldArr){
+        goldArr[i].multiply = -2
+    }
+    for(let i in robberArr){
+        robberArr[i].energy = -10
+    }
+    for(let i in policeArr){
+        policeArr[i].energy = -10
+    }
+    for(let i in supRobArr){
+        supRobArr[i].energy = -10
+    }
+}
+
+function Su(){
+    for(let i in goldArr){
+        goldArr[i].multiply = 0
+    }
+    for(let i in robberArr){
+        robberArr[i].energy = 0
+    }
+    for(let i in policeArr){
+        policeArr[i].energy = 0
+    }
+    for(let i in supRobArr){
+        supRobArr[i].energy = 0
+    }
+}
+
+function Sp(){
+    for(let i in goldArr){
+        goldArr[i].multiply = -2
+    }
+    for(let i in robberArr){
+        robberArr[i].energy = -5
+    }
+    for(let i in policeArr){
+        policeArr[i].energy = -5
+    }
+    for(let i in supRobArr){
+        supRobArr[i].energy = -5
+    }
+}
 
 function object(matrix){
     for (let y = 0; y < matrix.length; y++) {
@@ -182,18 +234,31 @@ io.on('connection', function(socket){
     object(matrix);
     socket.on("add gold", one)
     socket.on("SuperRobber", two)
-    // socket.on("winter", winte)
+    socket.on("winter:", Wi)
+    socket.on("autumn:", Au)
+    socket.on("spring:", Sp)
+    socket.on("summer", Su)
 })
 
-// let statistickOfCreature = {
-//     gold:0
-// }
+function writeInterval(){
+    console.log(5);
+}
 
-// setInterval(function(){
+let statistickOfCreature = {
+    gold:0,
+    robber:0,
+    police:0,
+    nss:0,
+    supRob:0
+}
 
-//     statistickOfCreature.gold = goldArr;
+setInterval(function(){
 
-//     fs.writeFile("statistics.js", JSON.stringify(statistickOfCreature))
+    statistickOfCreature.gold = goldArr;
+    statistickOfCreature.robber = robberArr;
+    statistickOfCreature.police = policeArr;
+    statistickOfCreature.nss = NSSArr;
+    statistickOfCreature.supRob = supRobArr;
 
-
-// },1000)
+    fs.writeFile("statistics.js", JSON.stringify(statistickOfCreature), writeInterval)
+},6000)

@@ -22,15 +22,19 @@ function SupRob(x,y){
 
 function winter(){
     weather = 'winter'
+    socket.emit("winter:")
 }
 function autumn(){
     weather = 'autumn'
+    socket.emit("autumn:")
 }
 function spring(){
     weather = 'spring'
+    socket.emit("spring:")
 }
 function summer(){
     weather = 'summer'
+    socket.emit("summer:")
 }
 
 function nkarel(matrix) {
